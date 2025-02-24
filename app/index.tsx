@@ -1,15 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { Colors } from '@/constants/Colors'
+import { globalStyles } from '@/styles/global-styles'
 
 const CalculatorApp = () => {
   return (
-    <View>
-      <Text style={{fontSize: 
-        20, textAlign: 'center', marginTop
-        : 20, color: Colors.textPrimary,
-        fontFamily: 'SpaceMono'
-      }}>ESTA ES MI CALCULADORA</Text>
+    <View style={globalStyles.calculatorContainer}>
+        <Text style={globalStyles.mainResult} numberOfLines={1} adjustsFontSizeToFit>200 x 293209382093802983902829083</Text>
+        <Text style={globalStyles.secondaryResult}>50</Text>
+
     </View>
   )
 }
