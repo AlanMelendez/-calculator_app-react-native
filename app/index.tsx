@@ -21,38 +21,38 @@ const CalculatorApp = () => {
       </View>
 
       <View style={globalStyles.row} >
-        <CalculatorButton text="C" blackText color={Colors.lightGray}  />
-        <CalculatorButton text="+/-" blackText color={Colors.lightGray} />
-        <CalculatorButton text="del" blackText color={Colors.lightGray} />
-        <CalculatorButton text="/"  color={Colors.orange}  />
+        <CalculatorButton text="C" blackText color={Colors.lightGray}  onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="+/-" blackText color={Colors.lightGray} onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="del" blackText color={Colors.lightGray} onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="/"  color={Colors.orange}  onPressAction={()=> console.log('hola')} />
       </View>
-      {/* <View style={globalStyles.row}>
-        <CalculatorButton text="7" />
-        <CalculatorButton text="8" />
-        <CalculatorButton text="9" />
-        <CalculatorButton text="X" />
+      <View style={globalStyles.row}>
+        <CalculatorButton text="7" onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="8" onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="9" onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="X"  onPressAction={()=> console.log('hola')}  color={Colors.orange}   />
 
       </View>
       <View style={globalStyles.row}>
-        <CalculatorButton text="4" />
-        <CalculatorButton text="5" />
-        <CalculatorButton text="6" />
-        <CalculatorButton text="-" />
+        <CalculatorButton text="4" onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="5" onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="6" onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="-" onPressAction={()=> console.log('hola')}  color={Colors.orange}  />
       </View>
       <View style={globalStyles.row}>
-        <CalculatorButton text="1" />
-        <CalculatorButton text="2" />
-        <CalculatorButton text="3" />
-        <CalculatorButton text="+" />
+        <CalculatorButton text="1" onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="2" onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="3" onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="+" onPressAction={()=> console.log('hola')}  color={Colors.orange}  />
       </View>
       <View style={globalStyles.row}>
 
       </View>
       <View style={globalStyles.row}>
-        <CalculatorButton text="0" />
-        <CalculatorButton text="." />
-        <CalculatorButton text="=" />
-      </View> */}
+        <CalculatorButton text="0" onPressAction={()=> console.log('hola')} doublesSize />
+        <CalculatorButton text="." onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="=" onPressAction={()=> console.log('hola')}  color={Colors.orange}  />
+      </View>
     </View>
 
 

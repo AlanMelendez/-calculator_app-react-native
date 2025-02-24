@@ -38,8 +38,8 @@ export const globalStyles = StyleSheet.create({
         paddingHorizontal: 10
     },
     button:{
-        height: 80,
-        width: 80,
+        height: 70,
+        width: 70,
         borderRadius: 100,
         justifyContent: 'center',
         alignItems: 'center',
@@ -49,7 +49,7 @@ export const globalStyles = StyleSheet.create({
     buttonText:{
         color: Colors.textPrimary,
         fontSize: 30,
-        fontWeight: 'bold',
+        fontWeight: '300',
         fontFamily: 'SpaceMono'
     }
 

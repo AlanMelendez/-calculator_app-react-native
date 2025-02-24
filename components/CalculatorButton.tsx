@@ -11,12 +11,20 @@ interface CalculatorButtonProps {
     width?: number;
     height?: number;
     onPressAction?: () => void;
+    doublesSize?: boolean;
 }
 
-const CalculatorButton = ({text, color = Colors.darkGray, blackText = false, onPressAction}:CalculatorButtonProps) => {
+const CalculatorButton = ({text, color = Colors.darkGray, blackText = false, onPressAction, doublesSize=false}:CalculatorButtonProps) => {
   return (
     <Pressable 
-        style={[globalStyles.button, {backgroundColor: color}]}
+        style={({pressed})=> (
+            {
+                ...globalStyles.button,
+                backgroundColor: color,
+                opacity: pressed ? 0.5 : 1,
+                width: doublesSize ? 150 : 70,
+            }
+        )}
         onPress={onPressAction}
         >
         <Text style={{
