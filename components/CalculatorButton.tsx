@@ -2,6 +2,7 @@ import { View, Text, Pressable } from 'react-native'
 import React from 'react'
 import { globalStyles } from '@/styles/global-styles';
 import { Colors } from '@/constants/Colors';
+import * as Haptics from 'expo-haptics';
 
 
 interface CalculatorButtonProps {
@@ -10,7 +11,7 @@ interface CalculatorButtonProps {
     blackText?: boolean;
     width?: number;
     height?: number;
-    onPressAction?: () => void;
+    onPressAction: () => void;
     doublesSize?: boolean;
 }
 
@@ -22,10 +23,15 @@ const CalculatorButton = ({text, color = Colors.darkGray, blackText = false, onP
                 ...globalStyles.button,
                 backgroundColor: color,
                 opacity: pressed ? 0.5 : 1,
-                width: doublesSize ? 150 : 70,
+                width: doublesSize ? 180 : 70,
             }
         )}
-        onPress={onPressAction}
+        onPress={()=>{
+            Haptics.notificationAsync(
+                Haptics.NotificationFeedbackType.Error
+            );
+            onPressAction();
+        }}
         >
         <Text style={{
             ...globalStyles.buttonText,

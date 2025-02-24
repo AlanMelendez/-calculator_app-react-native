@@ -21,7 +21,7 @@ const CalculatorApp = () => {
       </View>
 
       <View style={globalStyles.row} >
-        <CalculatorButton text="C" blackText color={Colors.lightGray}  onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="C" blackText color={Colors.lightGray}  onPressAction={()=> console.log('C')} />
         <CalculatorButton text="+/-" blackText color={Colors.lightGray} onPressAction={()=> console.log('hola')} />
         <CalculatorButton text="del" blackText color={Colors.lightGray} onPressAction={()=> console.log('hola')} />
         <CalculatorButton text="/"  color={Colors.orange}  onPressAction={()=> console.log('hola')} />
