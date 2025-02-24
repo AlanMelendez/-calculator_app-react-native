@@ -3,6 +3,7 @@ import React from 'react'
 import { globalStyles } from '@/styles/global-styles';
 import { Colors } from '@/constants/Colors';
 import * as Haptics from 'expo-haptics';
+import { useCalculator } from '@/hooks/useCalculator';
 
 
 interface CalculatorButtonProps {
@@ -16,7 +17,10 @@ interface CalculatorButtonProps {
 }
 
 const CalculatorButton = ({text, color = Colors.darkGray, blackText = false, onPressAction, doublesSize=false}:CalculatorButtonProps) => {
-  return (
+  
+ 
+  
+    return (
     <Pressable 
         style={({pressed})=> (
             {
