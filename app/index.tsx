@@ -11,7 +11,8 @@ const CalculatorApp = () => {
      const {
           formula,
           number,
-          buildNumber
+          buildNumber,
+          clearOperations,
 
       } = useCalculator();
   
@@ -28,12 +29,12 @@ const CalculatorApp = () => {
           {formula}
         </ThemeText>
         <ThemeText variant="secondary">
-          400
+          {number}
         </ThemeText>
       </View>
 
       <View style={globalStyles.row} >
-        <CalculatorButton text="C" blackText color={Colors.lightGray}  onPressAction={()=> console.log('C')} />
+        <CalculatorButton text="C" blackText color={Colors.lightGray}  onPressAction={()=> clearOperations()} />
         <CalculatorButton text="+/-" blackText color={Colors.lightGray} onPressAction={()=> console.log('hola')} />
         <CalculatorButton text="del" blackText color={Colors.lightGray} onPressAction={()=> console.log('hola')} />
         <CalculatorButton text="/"  color={Colors.orange}  onPressAction={()=> console.log('hola')} />

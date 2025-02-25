@@ -22,6 +22,17 @@ export const useCalculator = () => {
     setFormula(number);
   }, [number]);
 
+
+
+  const clearOperations = () => {
+    setNumber("0");
+    setPreviousNumber("0");
+    setFormula("0");
+    lasOperation.current = undefined;
+  }
+
+
+
   const buildNumber = (textNumber: string) => {
     // Do not accept multiple decimal points
     if (number.includes(".") && textNumber === ".") return;
@@ -70,5 +81,6 @@ export const useCalculator = () => {
 
     //Functions
     buildNumber,
+    clearOperations,
   };
 };
