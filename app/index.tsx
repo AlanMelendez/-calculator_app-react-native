@@ -14,6 +14,7 @@ const CalculatorApp = () => {
           buildNumber,
           clearOperations,
           changeNumberSign,
+          deleteLastOpration,
 
       } = useCalculator();
   
@@ -37,7 +38,7 @@ const CalculatorApp = () => {
       <View style={globalStyles.row} >
         <CalculatorButton text="C" blackText color={Colors.lightGray}  onPressAction={clearOperations} />
         <CalculatorButton text="+/-" blackText color={Colors.lightGray} onPressAction={changeNumberSign} />
-        <CalculatorButton text="del" blackText color={Colors.lightGray} onPressAction={()=> console.log('hola')} />
+        <CalculatorButton text="del" blackText color={Colors.lightGray} onPressAction={deleteLastOpration} />
         <CalculatorButton text="/"  color={Colors.orange}  onPressAction={()=> console.log('hola')} />
       </View>
       <View style={globalStyles.row}>

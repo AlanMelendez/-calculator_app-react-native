@@ -38,6 +38,17 @@ export const useCalculator = () => {
     
   };
 
+  const deleteLastOpration = () => {
+    if (number.length === 1) {
+      setNumber("0");
+    } if(number.length === 2 && number.includes("-")) {
+      setNumber("0");
+    }
+    else {
+      setNumber(number.slice(0, -1));
+    }
+  }
+
   const buildNumber = (textNumber: string) => {
     // Do not accept multiple decimal points
     if (number.includes(".") && textNumber === ".") return;
@@ -88,5 +99,6 @@ export const useCalculator = () => {
     buildNumber,
     clearOperations,
     changeNumberSign,
+    deleteLastOpration,
   };
 };
